@@ -75,11 +75,7 @@
 ### Download and Generate PiG/PFG ###
 
 - name: Install PNC CLI
-  pip:
-    name: pnc_cli
-    extra_args: --user 
-  become: yes
-  become_user: jenkins
+  command: "pip install pnc_cli"
 
 - name: Create tools directory for PiG
   file:
