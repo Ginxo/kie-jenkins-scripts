@@ -76,6 +76,8 @@
 
 - name: Install PNC CLI
   command: "pip install pnc_cli --user"
+  become: yes
+  become_user: jenkins
 
 - name: Create tools directory for PiG
   file:
